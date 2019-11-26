@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Muli,sans-serif;
+}
+.header *{
+    text-transform: uppercase;
+}
+.content{
+    padding: 0 5% 0 5%;
+}
+.header--contact{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #1d1c1c;
+    align-items: center;
+}
+
+.header--contact__{
+    display: flex;
+    flex-direction: row;
+}
+.header--contact__ > *{
+    margin-left: 30px;
+}
+div[class^="header--contact__"]{
+    color: #e0dcd0;
+}
+div[class^="header--contact__"] i{
+    margin-right: 5px;
+}
+
+.header--logo_large{
+    height: 191px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.header--logo_item{
+    /* TODO : link file */
+    background-image: url("../assets/background-pattern.png");
+    border-radius: 50%;
+    width: 71px;
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px 0 16px;
+}
+.header--logo_logo{
+    transform: scale(0.5, 0.5);
+}
+.header--navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header--navbar_item{
+    font-family: 'Cormorant', serif;
+    font-size: 110%;
+    margin: 0 20px 0 20px;
+}
+@media screen and (max-width: 1032px) {
+    .header--contact, .header--logo_large{
+        display: none;
+    }
+    .header--logo_small{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        border-bottom: 1px solid #d8d8d8;
+    }
+    .content{
+        padding: 0 10px 0 10px;
+    }
+    .header--logo_small img{
+        height: 30px;
+        width: auto;
+    }
+    .header--button{
+        display: block;
+        border-radius: 50%;
+        /* TODO : link */
+        border: none;
+        width: 53px;
+        height: 53px;
+        outline: none;
+        background : url("../assets/background-pattern.png");
+    }
+    .header--navbar{
+        padding: 10px;
+        font-family: Cormorant,sans-serif;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        right: 0;
+        top: 0;
+        width: 420px;
+        height: 100vh;
+        box-shadow: 0 1px 23.28px 0.72px rgba(255,51,102,.07);
+        background: white;
+        transform: translateX(102%);
+    }
+    .header{
+        position: relative;
+    }
+    .header--navbar_close_icon{
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+    .nav-active{
+        transform: translateX(0);
+        transition: all 0.4s ease;
+    }
+    .header--navbar_item{
+        height: 45px;
+    }
+
+}
+@media screen and (min-width: 1033px) {
+    .header--logo{
+        display: flex;
+        justify-content: center;
+    }
+    .header--logo_small{
+        display: none;
+    }
+    .header--navbar_close_icon{
+        display: none;
+    }
+    .header--navbar{
+        border-top: 1px solid #d8d8d8;
+        border-bottom: 1px solid #d8d8d8;
+        height: 63px;
+    }
+}
