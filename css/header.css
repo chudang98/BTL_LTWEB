@@ -5,15 +5,18 @@
     margin: 0;
 }
 body{
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: Muli,sans-serif;
+    /* min-height: 100vh;
+    overflow: hidden; */
+    /* font-family: Muli,sans-serif; */
 }
 .header *{
     text-transform: uppercase;
 }
-.content{
-    padding: 0 5% 0 5%;
+.padding-content{
+    padding: 0 10% 0 10%;
+}
+.margin-content{
+    margin: 0 10% 0 10%;
 }
 .header--contact{
     height: 50px;
@@ -80,8 +83,11 @@ div[class^="header--contact__"] i{
         height: 70px;
         border-bottom: 1px solid #d8d8d8;
     }
-    .content{
+    .padding-content{
         padding: 0 10px 0 10px;
+    }
+    .margin-content{
+        margin: 0 10px 0 10px;
     }
     .header--logo_small img{
         height: 30px;
@@ -128,6 +134,7 @@ div[class^="header--contact__"] i{
     }
 
 }
+
 @media screen and (min-width: 1033px) {
     .header--logo{
         display: flex;
